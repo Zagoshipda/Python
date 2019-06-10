@@ -1,6 +1,8 @@
 # 6.4 입력 값을 변수 2개에 저장하기 
-# input과 split의 결과가 문자열string이라는 점을 주의하자
+# input()과 split()의 결과가 문자열string이라는 점을 주의하자 -> input으로 들어온 숫자를 가지고 계산을 해야 하는 경우 input의 결과값을 (int), (float)를 사용해서 숫자로 변환casting해주어야 함 
 # split의 결과를 모두 int, float로 변환할 때는 map을 사용하면 편리
+
+    # val1, val2, ... = input('문자열prompt ...').split('input 구분 기준 문자열')
 
 
 # 입력받은 값을 공백을 기준으로 분리
