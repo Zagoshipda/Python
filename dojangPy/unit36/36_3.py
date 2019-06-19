@@ -57,7 +57,7 @@ print(james.hello)  #hello
 
 
 print('super === ')
-#super(derivedclass, self).method() : 현재 클래스가 어떤 클래스인지 명확하게 표시하는 방법
+#super(derivedclass, self).method() : 현재 클래스가 어떤 클래스인지 명확하게 표시하는 방법 -> self가 2번째 argument로 들어감에 주의하기 
 
 class Student(Person):
     def __init__(self):
