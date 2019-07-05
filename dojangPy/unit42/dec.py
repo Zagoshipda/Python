@@ -65,3 +65,35 @@ print(add4(2, 4))
 # add4 func end
 # wrapper's return value is multiple of 2
 # 6
+
+
+
+print('\nusing 2 parameters in decorator ----- ')
+
+import functools
+
+def is_multiple2(x, y):
+    def dec(func):
+        @functools.wraps(func)
+        def wrapper(a, b):
+            r = func(a, b)
+            if r % x == 0:
+                print("{0} : return val is mul of {1}".format(func.__name__, x))
+            else:
+                print("{0} : return val is NOT mul of {1}".format(func.__name__, x))
+            if r % y == 0:
+                print("{0} : return val is mul of {1}".format(func.__name__, y))
+            else:
+                print("{0} : return val is NOT mul of {1}".format(func.__name__, y))
+            return r
+        return wrapper
+    return dec
+
+@is_multiple2(2, 3)
+def add2(a, b):
+    return a + b
+
+print(add2(1, 2))
+# add2 : return val is NOT mul of 2
+# add2 : return val is mul of 3
+# 3
